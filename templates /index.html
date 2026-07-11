@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Student Placement Predictor</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<h1>Student Placement Predictor</h1>
+
+<form action="/predict" method="post">
+
+<label>IQ:</label>
+<input type="text" name="IQ" required>
+
+<br><br>
+
+<label>Previous Semester Result:</label>
+<input type="text" name="Prev_Sem_Result" required>
+
+<br><br>
+
+<label>CGPA:</label>
+<input type="text" name="CGPA" required>
+
+<br><br>
+
+<label>Academic Performance:</label>
+<input type="text" name="Academic_Performance" required>
+
+<br><br>
+
+<label>Internship Experience (0 = No, 1 = Yes):</label>
+<input type="text" name="Internship_Experience" required>
+
+<br><br>
+
+<label>Extra Curricular Score:</label>
+<input type="text" name="Extra_Curricular_Score" required>
+
+<br><br>
+
+<label>Communication Skills:</label>
+<input type="text" name="Communication_Skills" required>
+
+<br><br>
+
+<label>Projects Completed:</label>
+<input type="text" name="Projects_Completed" required>
+
+<br><br>
+
+<button type="submit">Predict</button>
+
+</form>
+
+<h2>{{ prediction_text }}</h2>
+
+</body>
+
+</html>
